@@ -80,6 +80,15 @@ def daily_mean(data):
     return np.mean(data, axis=0)
 
 
+def daily_stddev(data):
+    """Calculate the daily mean of a 2D inflammation data array.
+
+    :param data: matrix with inflammation data (rows: patients, columns: days)
+    :returns: array with daily means of inflammation for each patient
+    """
+    return np.std(data, axis=0)
+
+
 def daily_max(data):
     """Calculate the daily max of a 2D inflammation data array.
 

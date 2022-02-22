@@ -23,6 +23,7 @@ def main(args):
         if args.view == 'visualize':
             view_data = {
                 'average': models.daily_mean(inflammation_data),
+                'stddev': models.daily_stddev(inflammation_data),
                 'max': models.daily_max(inflammation_data),
                 'min': models.daily_min(inflammation_data),
             }
