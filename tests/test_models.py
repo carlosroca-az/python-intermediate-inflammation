@@ -23,6 +23,21 @@ def test_daily_mean(test, expected):
     "test, expected",
     [
         ([[0, 0], [0, 0], [0, 0]], [0, 0]),     # zeros
+        ([[1, 2], [3, 4], [5, 6]], [1.632993, 1.632993]),  # positive integers
+        ([[1, 2], [3, 4], [5, float('nan')]], [1.632993, float('nan')]),  # positive ints and nan
+    ]
+)
+def test_daily_stddev(test, expected):
+    """Test that the standard deviation function works for cases above."""
+    from inflammation.models import daily_stddev
+    # Need to use Numpy testing functions to compare arrays
+    npt.assert_array_almost_equal(daily_stddev(test), expected, decimal=6)
+
+
+@pytest.mark.parametrize(
+    "test, expected",
+    [
+        ([[0, 0], [0, 0], [0, 0]], [0, 0]),     # zeros
         ([[1, 2], [3, 4], [5, 6]], [5, 6]),     # positive integers
     ]
 )
