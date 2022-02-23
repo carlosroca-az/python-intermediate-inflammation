@@ -23,8 +23,8 @@ def test_daily_mean(test, expected):
     "test, expected",
     [
         ([[0, 0], [0, 0], [0, 0]], [0, 0]),     # zeros
-        ([[1, 2], [3, 4], [5, 6]], [1.633, 1.633],  # positive integers
-         [[1, 2], [3, 4], [5, float('nan')]], [1.633, float('nan')]),  # positive ints and nan
+        ([[1, 2], [3, 4], [5, 6]], [1.633, 1.633]),  # positive integers
+        ([[1, 2], [3, 4], [5, float('nan')]], [1.633, float('nan')]),  # positive ints and nan
     ]
 )
 def test_daily_stddev(test, expected):
