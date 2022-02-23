@@ -24,4 +24,4 @@ dist/
 
 # Poetry
 poetry.lock
-# pyprojet.toml
+pyprojet.toml
