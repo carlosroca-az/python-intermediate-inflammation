@@ -81,7 +81,7 @@ def daily_mean(data):
 
 
 def daily_stddev(data):
-    """Calculate the daily mean of a 2D inflammation data array.
+    """Calculate the daily standard deviation of a 2D inflammation data array.
 
     :param data: matrix with inflammation data (rows: patients, columns: days)
     :returns: array with daily means of inflammation for each patient
