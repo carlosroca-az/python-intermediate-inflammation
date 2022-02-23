@@ -75,7 +75,7 @@ def daily_mean(data):
     """Calculate the daily mean of a 2D inflammation data array.
 
     :param data: matrix with inflammation data (rows: patients, columns: days)
-    :returns: array with daily means of inflammation for each patient
+    :returns: array with daily std devs of inflammation for each patient
     """
     return np.mean(data, axis=0)
 
